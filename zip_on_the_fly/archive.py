@@ -36,7 +36,7 @@ class ArchiveStream(Stream[bytes], Generic[Element]):
             element: ArchiveElement from your sources
             error: original exception
         """
-        raise error  # feel free to override
+        raise error
 
     async def _stream_file(self, source: Element) -> TStream[bytes]:
         start = self.offset.value
